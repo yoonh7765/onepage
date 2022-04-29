@@ -1,0 +1,529 @@
+/*id 태그작업*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* 스크롤바 꾸미기 시작 */
+:root {
+    overflow-y: overlay;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(45, 45, 45, 0.3);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* 스크롤바 꾸미기 끝 */
+
+/* 폰트 */
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+html>body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/*top버튼*/
+
+.top-btn {
+    width: 100px;
+    height: 100px;
+    background-color: #A7776D;
+    opacity: 80%;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 2;
+    right: 100px;
+    top: 60%;
+    position: absolute;
+}
+
+.top-btn a {
+
+    width: 100px;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*상단 헤더 메뉴바*/
+.top-bar {
+    height: 100px;
+}
+
+.top-bar a {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.top-menu {
+    margin-right: 40px;
+}
+
+/*상단 헤더 메뉴바 글자*/
+.top-menu>li>a>span {
+    display: block;
+    position: relative;
+    padding: 0 40px;
+}
+
+.top-menu>li>a {
+    padding-top: 40px;
+}
+
+.top-menu>li>a>span::after {
+    content: "";
+    background-color: #333;
+    bottom: 10%;
+    position: absolute;
+    left: 40px;
+    right: 50px;
+    width: calc(100% - 80px);
+    height: 2px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.top-menu>li:hover>a>span::after {
+    opacity: 1;
+    transition: all 0.6s;
+}
+
+/*상단 헤더 메뉴바 호버시*/
+.top-menu>li:hover>a>span {
+    font-weight: bold;
+    color: black;
+    transform: scale(1.2);
+    transition: transform .1s ease 0s;
+}
+
+.top-menu a {
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
+}
+
+/*상단 헤더 메뉴바 호버시 끝*/
+/*section*/
+.section-1 {
+    background-image: url(https://cdn.jsdelivr.net/gh/yoonh7765/onepage/docs/img/section-1.png);
+    height: 1210px;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.main-1 {
+    top: -140px;
+    left: 1505px;
+}
+
+.main-2 {
+    top: 890px;
+    left: 917px;
+}
+
+.main-3 {
+    top: 300px;
+    left: 458px;
+}
+
+.main-4 {
+    top: 573px;
+    left: 1792px;
+}
+
+/*section*/
+.section-2 {
+    background-image: url(https://cdn.jsdelivr.net/gh/yoonh7765/onepage/docs/img/section-2.png);
+    height: 1770px;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.about-1 {
+    top: 1364px;
+    left: 344px;
+}
+
+.about-2 {
+    top: 137px;
+    left: 1191px;
+}
+
+.about-3 {
+    top: 14px;
+    left: 344px;
+}
+
+.about-4 {
+    top: 1013px;
+    left: 344px;
+}
+
+.about-5 {
+    top: 694px;
+    left: 988px;
+
+}
+
+.about-6 {
+    top: 398px;
+    left: 842px;
+}
+
+.about-7 {
+    top: 466px;
+    left: -20px;
+}
+
+/*스킬그래프*/
+.design-skill-bar {
+    top: 1264px;
+    left: 322px;
+    font-size: 28px;
+}
+
+.design-section-1 {
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+}
+
+.typo {
+    width: 100%;
+    height: 100%;
+}
+
+/*그래프*/
+.progress-1 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translatex(0%) translatey(-50%);
+    width: 300px;
+    margin: 0 auto;
+    background-color: #001E36;
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+/*그래프 막대 두께*/
+.progress-1>div {
+    height: 14px;
+    background-color: #31A8FF;
+    animation-name: ani-1-ps;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+}
+
+@keyframes ani-1-ps {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 70%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.progress-2 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translatex(0%) translatey(-50%);
+    width: 300px;
+    margin: 0 auto;
+    background-color: #330000;
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+.progress-2>div {
+    height: 14px;
+    background-color: #FF9A00;
+    animation-name: ani-1-il;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+}
+
+@keyframes ani-1-il {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 80%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+.progress-3 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translatex(0%) translatey(-50%);
+    width: 300px;
+    margin: 0 auto;
+    background-color: #00005B;
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+.progress-3>div {
+    height: 14px;
+    background-color: #9999FF;
+    animation-name: ani-1-pr;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+}
+
+@keyframes ani-1-pr {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 50%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+.progress-4 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translatex(0%) translatey(-50%);
+    width: 300px;
+    margin: 0 auto;
+    background-color: #00005B;
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+.progress-4>div {
+    height: 14px;
+    background-color: #9999FF;
+    animation-name: ani-1-ae;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+}
+
+@keyframes ani-1-ae {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 65%;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+/*section*/
+.section-3 {
+    background-image: url(https://cdn.jsdelivr.net/gh/yoonh7765/onepage/docs/img/section-3-final.png);
+    height: 1699px;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.portfolio-1 {
+    top: 58px;
+    left: 512px;
+}
+
+.portfolio-2 {
+    top: 1030px;
+    left: 512px;
+}
+
+.portfolio-3 {
+    left: -245px;
+    top: -550px;
+}
+
+/*스와이퍼*/
+.swiper-box-1 .swiper {
+    margin-left: auto;
+    margin-right: 0;
+    width: 1408px;
+    height: 898px;
+    --swiper-theme-color: #A7776D;
+}
+
+.navi-btn {
+    padding-left: 515px;
+}
+
+.navi-btn>div:first-child {
+    margin-right: 50px;
+}
+
+/*버튼*/
+
+.btn-1 {
+    width: 340px;
+    height: 43px;
+}
+
+.btn>li {
+    width: 155px;
+    height: 43px;
+}
+
+.btn>li>a {
+
+    background-color: #A7776D;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-1>li:first-child {
+    margin-right: 30px;
+}
+
+.btn>li:hover>a {
+    background-color: white;
+    color: #A7776D;
+    transition: all 0.3s;
+}
+
+.btn-2 {
+
+    width: 155px;
+    height: 43px;
+}
+
+.btn-box-2 {
+    top: 1787px;
+    left: 816px;
+}
+
+/*section*/
+.section-4 {
+    background-image: url(https://cdn.jsdelivr.net/gh/yoonh7765/onepage/docs/img/section-4new.png);
+    height: 1514px;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.contact-1 {
+    top: 790px;
+    left: -102px;
+}
+
+.contact-2 {
+    top: 1179px;
+    left: -22px;
+}
+
+.contact-3 {
+    z-index: 1;
+    top: 108px;
+    left: 86px;
+}
+
+.contact-4 {
+    top: 1178px;
+    left: 414px;
+}
+
+.contact-5 {
+    top: 26px;
+    left: 384px;
+}
+
+.contact-6 {
+    top: 149px;
+    left: 1200px;
+}
+
+/*컨텍 우측 상단에 있었던 꽃*/
+.portfolio-4 {
+    bottom: 100px;
+    right: 0;
+}
+
+/*애니*/
+.scroll-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%) translatey(50%);
+    width: 5px;
+    height: 100px;
+    background-color: brown;
+    border-radius: 10px;
+}
+
+.scroll-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    background-color: #A7776D;
+    animation-name: ani-1;
+    animation-duration: 2s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ani-1 {
+    0% {
+        bottom: 100%;
+    }
+
+    1% {
+        bottom: 95%;
+        top: 0%;
+    }
+
+    50% {
+        bottom: 95%;
+    }
+
+    70% {
+        top: 0%;
+    }
+
+    80% {
+        bottom: 0%;
+    }
+
+    100% {
+        top: 100%;
+        bottom: 0%;
+    }
+}
